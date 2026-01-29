@@ -1,0 +1,40 @@
+{
+    "id": 1,
+    "title": "Two Sum",
+    "description": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.\r\n\r\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.\r\n\r\nYou can return the answer in any order.\r\n\r\n\r\n**Example 1:**\r\n\r\n**Input:** \r\n\r\n```bash\r\n2,7,11,15\r\n9\r\n```\r\n\r\n **Output** \r\n ```\r\n [0, 1]\r\n ```\r\n**Explanation:** Because nums[0] + nums[1] == 9, we return [0, 1].\r\n\r\n\r\n**Example 2:**\r\n```\r\nInput: nums = [3,2,4], target = 6\r\nOutput: [1,2]\r\n```\r\n\r\n**Example 3:**\r\n```\r\nInput: nums = [3,3], target = 6\r\nOutput: [0,1]\r\n```\r\n\r\n**Constraints:**\r\n* 2 <= nums.length <= 104\r\n* -109 <= nums[i] <= 109\r\n* -109 <= target <= 109\r\n* Only one valid answer exists.\r\n \r\n\r\nFollow-up: Can you come up with an algorithm that is less than O(n2) time complexity?",
+    "created_at": "2025-09-18T10:08:08.994801Z",
+    "test_cases": [
+        {
+            "id": 1,
+            "problem": 1,
+            "stdin": "3,2,4\r\n6",
+            "output": "[1, 2]"
+        },
+        {
+            "id": 2,
+            "problem": 1,
+            "stdin": "3,3\r\n6",
+            "output": "[0, 1]"
+        },
+        {
+            "id": 3,
+            "problem": 1,
+            "stdin": "2,7,11,15\r\n9",
+            "output": "[0, 1]"
+        },
+        {
+            "id": 7,
+            "problem": 1,
+            "stdin": "3, 4, 9, 10, 11\r\n19",
+            "output": "[2, 3]"
+        }
+    ],
+    "code_submissions": {
+        "id": 2,
+        "problem": 1,
+        "user": "804db8b2-b91c-4779-b902-93848f858ebd",
+        "created_at": "2025-09-19T17:25:26.329107Z",
+        "code": "inp = input()\r\ntarget = int(input())\r\n\r\ninp = inp.split(\",\")\r\nnums = [int(i.strip()) for i in inp]\r\n\r\ndef twoSum(nums, target):\r\n    seen = {}\r\n    for i, num in enumerate(nums):\r\n        if(target - num in seen):\r\n            return [seen[target - num], i]\r\n        else:\r\n            seen[num] = i\r\n\r\nprint(twoSum(nums, target))",
+        "testcase_results": []
+    }
+}
