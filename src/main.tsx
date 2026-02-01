@@ -18,7 +18,7 @@ const router = createBrowserRouter([
                 element: <ProblemList />,
             },
             {
-                path: "/problems/:id",
+                path: "/:id",
                 element: <ProblemPage />,
             },
         ],
