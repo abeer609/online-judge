@@ -36,7 +36,7 @@ const ProblemList = () => {
                     <div className="bg-gray-800 rounded-lg overflow-hidden shadow-xl">
                         {problems.map((problem, idx) => (
                             <Link
-                                to={`/problems/${problem.id}`}
+                                to={`/${problem.id}`}
                                 key={problem.id}
                                 className="flex items-center px-6 py-4 border-b border-gray-700 last:border-b-0 cursor-pointer transition-colors duration-200 hover:bg-gray-750"
                             >
