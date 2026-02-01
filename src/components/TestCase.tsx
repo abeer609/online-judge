@@ -10,7 +10,6 @@ interface Props {
     selectedSubmission: SubmissionResult;
 }
 const TestCase = ({ selectedSubmission }: Props) => {
-    console.log(selectedSubmission.status_id);
     if (selectedSubmission.status_id == 3) {
         return (
             <div>

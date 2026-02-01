@@ -15,7 +15,7 @@ const ProblemList = () => {
     });
 
     if (isLoading) {
-        return <Loading showLogo={true} />;
+        return <Loading showLogo={false} />;
     } else if (!problems && !isLoading) {
         return <div>No problems found</div>;
     } else if (problems && !isLoading) {
